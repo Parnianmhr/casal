@@ -6,4 +6,3 @@ Rails.application.routes.draw do
   resources :guests, only: [:create]
   end
   resources :users
-end
