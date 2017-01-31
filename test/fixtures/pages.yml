@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text_field1: MyText
+  text_field2: MyText
+  text_field3.text: MyString
+  text_field4.text: MyString
+  text_field5.text: MyString
+  text_field6.text: MyString
+  text_field7.text: MyString
+  image_field1.string: MyString
+  image_field2.string: MyString
+  image_field3.string: MyString
+  image_field4.string: MyString
+  image_field5.string: MyString
+  image_field6.string: MyString
+  image_field7.string: MyString
+  image_field8.string: MyString
+
+two:
+  text_field1: MyText
+  text_field2: MyText
+  text_field3.text: MyString
+  text_field4.text: MyString
+  text_field5.text: MyString
+  text_field6.text: MyString
+  text_field7.text: MyString
+  image_field1.string: MyString
+  image_field2.string: MyString
+  image_field3.string: MyString
+  image_field4.string: MyString
+  image_field5.string: MyString
+  image_field6.string: MyString
+  image_field7.string: MyString
+  image_field8.string: MyString
