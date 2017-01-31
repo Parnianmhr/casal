@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
 
   def index
     @booking = Booking.new
+    @guest = Guest.new
   end
 
   def create
