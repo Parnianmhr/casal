@@ -4,6 +4,5 @@ Rails.application.routes.draw do
 
   resources :bookings
   resources :guests, only: [:create]
-  end
   resources :users
-end
+  end
