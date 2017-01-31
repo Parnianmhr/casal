@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  root to: "index#home"
+  get 'pages/contact'
 
-  resources :bookings
-  resources :guests, only: [:create]
-  resources :users
-  end
+    get 'pages/home'
+    root to: 'pages#home'
+    devise_for :admins
+
+    resources :bookings
+    resources :guests, only: [:create]
+    resources :users
+end
