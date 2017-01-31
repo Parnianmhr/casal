@@ -1,0 +1,26 @@
+<%= form_for @guest do |f| %>
+  <p><%= f.label "Salutation:" %>
+  <%= f.text_field :salutation %></p>
+  <p><%= f.label "First name:" %>
+  <%= f.text_field :first_name %></p>
+  <p><%= f.label "Insertion:" %>
+  <%= f.text_field :insertion %></p>
+  <p><%= f.label "Last name:" %>
+  <%= f.text_field :last_name %></p>
+  <p><%= f.label "Date of birth:" %>
+  <%= f.date_select :date_of_birth %></p>
+  <p><%= f.label "Street:" %>
+  <%= f.text_field :street %></p>
+  <p><%= f.label "Streetnumber:" %>
+  <%= f.number_field :street_number %></p>
+  <p><%= f.label "ZIP-code:" %>
+  <%= f.number_field :zipcode %></p>
+  <p><%= f.label "City:" %>
+  <%= f.text_field :city %></p>
+  <p><%= f.label "Country:" %>
+  <%= f.text_field :country %></p>
+  <p><%= f.label "Phonenumber:" %>
+  <%= f.number_field :phone_number %></p>
+  <p><%= f.label "Email address:" %>
+  <%= f.text_field :email_address %></p>
+<% end %>
