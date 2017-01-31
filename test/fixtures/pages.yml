@@ -3,33 +3,33 @@
 one:
   text_field1: MyText
   text_field2: MyText
-  text_field3.text: MyString
-  text_field4.text: MyString
-  text_field5.text: MyString
-  text_field6.text: MyString
-  text_field7.text: MyString
-  image_field1.string: MyString
-  image_field2.string: MyString
-  image_field3.string: MyString
-  image_field4.string: MyString
-  image_field5.string: MyString
-  image_field6.string: MyString
-  image_field7.string: MyString
-  image_field8.string: MyString
+  text_field3: MyText
+  text_field4: MyText
+  text_field5: MyText
+  text_field6: MyText
+  text_field7: MyText
+  image_field1: MyString
+  image_field2: MyString
+  image_field3: MyString
+  image_field4: MyString
+  image_field5: MyString
+  image_field6: MyString
+  image_field7: MyString
+  image_field8: MyString
 
 two:
   text_field1: MyText
   text_field2: MyText
-  text_field3.text: MyString
-  text_field4.text: MyString
-  text_field5.text: MyString
-  text_field6.text: MyString
-  text_field7.text: MyString
-  image_field1.string: MyString
-  image_field2.string: MyString
-  image_field3.string: MyString
-  image_field4.string: MyString
-  image_field5.string: MyString
-  image_field6.string: MyString
-  image_field7.string: MyString
-  image_field8.string: MyString
+  text_field3: MyText
+  text_field4: MyText
+  text_field5: MyText
+  text_field6: MyText
+  text_field7: MyText
+  image_field1: MyString
+  image_field2: MyString
+  image_field3: MyString
+  image_field4: MyString
+  image_field5: MyString
+  image_field6: MyString
+  image_field7: MyString
+  image_field8: MyString
