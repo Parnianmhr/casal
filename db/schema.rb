@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20170131102910) do
-
+ActiveRecord::Schema.define(version: 20170131113241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +58,26 @@ ActiveRecord::Schema.define(version: 20170131102910) do
     t.string   "email_address"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.text     "text_field1"
+    t.text     "text_field2"
+    t.text     "text_field3"
+    t.text     "text_field4"
+    t.text     "text_field5"
+    t.text     "text_field6"
+    t.text     "text_field7"
+    t.string   "image_field1"
+    t.string   "image_field2"
+    t.string   "image_field3"
+    t.string   "image_field4"
+    t.string   "image_field5"
+    t.string   "image_field6"
+    t.string   "image_field7"
+    t.string   "image_field8"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_foreign_key "bookings", "guests"
