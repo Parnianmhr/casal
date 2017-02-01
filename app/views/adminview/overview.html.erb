@@ -27,10 +27,7 @@
         <tbody>
           <% @villa.each do |season| %>
             <tr>
-              <td> Basic price: <%= villa.basic_price %>  </td>
-              <td> Extra price per person: <%= villa.extra_price %> </td>
-              <td> Discount percentage: <%= villa.discount %> </td>
-              <td> Service costs: <%= villa.service %> </td>
+              <td> <%= render 'form' %> </td>
             </tr>
           <% end %>
         </tbody>
