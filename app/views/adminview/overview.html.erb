@@ -6,10 +6,14 @@
       <tbody>
         <% @bookings.each do |booking| %>
           <tr>
-            <td> Booking period: <%= booking.starts_at %> to <%= booking.ends_at %>.  </td>
-            <td> Booked by: <%= booking.first_name, booking.last_name %> </td>
-            <td> Guest address: <%= booking.address, booking.zipcode, booking.city, booking.country %> </td>
-            <td> Guest contact details: <%= booking.email, booking.telephone %> </td>
+            <td> Booking period: <%= @booking.starts_at %> to <%= @booking.ends_at %>.  </td>
+            <td> Booked by: <%= @booking.prefix, @booking.first_name, @booking.last_name %> </td>
+            <td> Total price: <%= @booking.total %> </td>
+            <td> Number of guests: <%= @booking.number_of_guests %> </td>
+            <td> Guest address: <%= @booking.street_name, @booking.house_number @booking.zipcode, @booking.city_of_residence, @booking.country_of_residence %> </td>
+            <td> Guest contact details: <%= @booking.email_address, @booking.phone_number %> </td>
+            <td> <%= if booking.confirmed == true { puts "Confirmed booking."} %>
+                <%=  else {puts "Optional booking."} <%> </td>
           </tr>
         <% end %>
       </tbody>
@@ -23,10 +27,7 @@
         <tbody>
           <% @villa.each do |season| %>
             <tr>
-              <td> Basic price: <%= villa.basic_price %>  </td>
-              <td> Extra price per person: <%= villa.extra_price %> </td>
-              <td> Discount percentage: <%= villa.discount %> </td>
-              <td> Service costs: <%= villa.service %> </td>
+              <td> <%= render 'form' %> </td>
             </tr>
           <% end %>
         </tbody>
