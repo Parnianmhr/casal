@@ -20,7 +20,7 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
 
@@ -393,40 +393,20 @@
         <div class="container">
             <div class="row">
               <h2>We love <i class="fa fa-heart"></i> new friends!</h2>
-              <ul class="list-inline list-social">
-                <li class="social-twitter">
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li class="social-facebook">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li class="social-google-plus">
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                </li>
-             </ul>
+            <br>
                 <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
-                        <p>Facebook here</p>
-                    </a>
+                  <a href="//casalverde.reviewbuddy.com" id="reviewbuddylink">Open customer recommendations about Cas'al Verde</a>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
-                        <p>tripadvisor here</p>
-                    </a>
+                  <!-- InstaWidget -->
+                <a href="https://instawidget.net/v/user/casalverde.eu" id="link-5c2d392db04c84977f55cba69c07841c294cf6df001814e14331cca17ae5e177">@casalverde.eu</a>
+                <script src="https://instawidget.net/js/instawidget.js?u=5c2d392db04c84977f55cba69c07841c294cf6df001814e14331cca17ae5e177&width=200px"></script>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                        <p>something else here</p>
-                    </a>
+                        <p>strivago</p>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
                         <p>macazun here</p>
-                    </a>
                 </div>
             </div>
         </div>
@@ -447,7 +427,7 @@
                         <div class="row">
                             <div class="col-md-6 intro-lead">
                               <p>Tel:</p>
-                              <p>Email: </p>
+                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i>Email:</p>
                             </div>
                             <div class="col-md-6">
 
@@ -688,7 +668,13 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
-
+    <script type="text/javascript">
+     (function() {
+     var rb = document.createElement('script'); rb.type = 'text/javascript'; rb.async = true;
+     rb.src = '//casalverde.reviewbuddy.com/widget.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(rb, s);
+     })();
+     </script>
 </body>
 
 </html>
