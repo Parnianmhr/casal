@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
     resources :bookings
     resources :guests, only: [:create]
-    resources :users
+    resources :admins
 end

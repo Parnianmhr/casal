@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
 
+  # before_action :authenticate_admin!
+
+
   def edit
     @content = Page.find(params[:id])
   end
