@@ -1,0 +1,17 @@
+<h1>Check here if our villa is available on your selected dates!</h1>
+
+
+<div>
+    <div>
+      <%= form_for @booking do |f| %>
+        <p><%= f.label "Check In:" %>
+        <%= f.date_select :starts_at %></p>
+        <p><%= f.label "Check Out:" %>
+          <%= f.date_select :ends_at %></p>
+        <%= f.submit :save %>
+      <% end %>
+    </div>
+
+      <hr>
+
+</div>

@@ -1,14 +1,30 @@
 class BookingsController < ApplicationController
 
   def index
+    @bookings = Booking.all
     @booking = Booking.new
-    @guest = Guest.new
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+  end
+
+  def new
+    @booking = Booking.new
   end
 
   def create
-    @booking = Booking.new
+    @booking = Booking.create(booking_params)
 
-    redirect_to bookings_path, notice: "Thank you for your booking!"
+    if @booking.save
+
+    redirect_to new_booking_path, notice: "Fill out your personal details here!"
+
+    else
+
+    render :show
+
+    end
   end
 
 
