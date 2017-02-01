@@ -1,0 +1,12 @@
+<% if admin_logged_in? %>
+<%= render :partial => "home/image_edit" %>
+<% end %>
+
+  <div id="image_edit">
+  Signed in as <%= link_to admin.email, edit_page_path %>
+  </div>
+
+    <ul>
+   <p> <%= link_to "edit image url", page_path(@content), method: :edit, data:{confirm: "Are you sure?"}, class: "btn btn-danger btn-xs pull right" %> </p>
+    </ul>
+  <% end %>
