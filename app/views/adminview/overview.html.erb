@@ -1,0 +1,61 @@
+<div class="body-bookings">
+  <h2 class="header"> All current bookings </h2>
+    <p class="bookings"> There are currently <%= @bookings.length %> </p>
+
+    <table class="bookings-table">
+      <tbody>
+        <% @bookings.each do |booking| %>
+          <tr>
+            <td> Booking period: <%= booking.starts_at %> to <%= booking.ends_at %>.  </td>
+            <td> Booked by: <%= booking.first_name, booking.last_name %> </td>
+            <td> Guest address: <%= booking.address, booking.zipcode, booking.city, booking.country %> </td>
+            <td> Guest contact details: <%= booking.email, booking.telephone %> </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="body-prices">
+    <h2 class="header"> Prices </h2>
+
+      <table class="bookings-table">
+        <tbody>
+          <% @villa.each do |season| %>
+            <tr>
+              <td> Basic price: <%= villa.basic_price %>  </td>
+              <td> Extra price per person: <%= villa.extra_price %> </td>
+              <td> Discount percentage: <%= villa.discount %> </td>
+              <td> Service costs: <%= villa.service %> </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="body-admin">
+      <h2 class="header"> Admin control </h2>
+
+        <%= form_for [@admin, Admin.new(admin: @admin)] do |admin| %>
+          <div>
+            <h3> Add a new admin </h3>
+            <%= admin.text_field :email, placeholder: 'Add a valid email address' %>
+            <%= admin.text_field :password, placeholder: 'Add a secure password' %>
+            <%= admin.submit "Add a new admin account", class: "btn btn-danger btn-xs pull right" %>
+          </div>
+        <% end %>
+    </div>
+
+    <% if @admin.any? %>
+      <% @admin.each do |admin| %>
+        <ul>
+          <li> <em> <b> Email: </em> </b>  <%= admin.email %> </li>
+          <% if @admin.super['true'] %>
+          <li>  <%= link_to "Delete account", admin_path(@admin, admin), method: :delete, data:{confirm: "Are you sure?"}, class: "btn btn-danger btn-xs pull right" %> </li>
+          <% else %>
+            <!--nothing  -->
+          <% end %>
+      </ul>
+      <% end %>
+    <% end %>
