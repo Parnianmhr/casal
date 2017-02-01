@@ -1,0 +1,19 @@
+<h1>Book your stay in paradise here!</h1>
+
+
+<div>
+    <div>
+      <%= form_for @booking do |f| %>
+        <p><%= f.label "Check In:" %>
+        <%= f.date_select :starts_at %></p>
+        <p><%= f.label "Check Out:" %>
+          <%= f.date_select :ends_at %></p>
+        <%= f.submit :save %>
+      <% end %>
+    </div>
+
+      <hr>
+
+      <%= render '/guests/guest' %>
+
+</div>

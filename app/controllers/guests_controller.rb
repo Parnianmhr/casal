@@ -1,6 +1,6 @@
 class GuestsController < ApplicationController
 
-  def create
+  def new
     @guest = Guest.new
   end
 end
