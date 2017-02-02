@@ -2,8 +2,6 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
-
-    before_filter :authorize #makes the person/admin log in first
   end
 
 # Villa Model
