@@ -1,6 +1,8 @@
 class BookingsController < ApplicationController
 
   def index
+    before_filter :authorize #zorgt ervoor dat de persoon eerst in moet loggen
+
     @bookings = Booking.all(params[:id])
     @booking = Booking.new
   end
@@ -17,7 +19,7 @@ class BookingsController < ApplicationController
       redirect_to @booking.room, notice: "Sorry! Cas'al Verde is not available during the dates you requested. Available booking dates can be seen on the calender."
     end
   end
-  
+
   def show
     @booking = Booking.find(params[:id])
   end

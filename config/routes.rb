@@ -6,7 +6,13 @@ Rails.application.routes.draw do
 
     resources :bookings
     resources :villas
-    #Admin routes
+
+    #Sessions routes - enables admin to log in and log out
+    get '/login' => 'sessions#new'
+    post '/login' => 'sessions#create'
+    get '/logout' => 'sessions#destroy'
+
+    #Admin routes - allows admin to create a new admin
     get '/signup' => 'admins#new'
-    post '/users' => 'admins#create'
+    post '/admins' => 'admins#create'
 end
