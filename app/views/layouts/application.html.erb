@@ -9,8 +9,15 @@
     </head>
 
     <body>
-
+      
+      <div>
       <%= yield %>
+      </div>
+
+      <footer>
+        <p>&copy; Cas'al Verde</p>
+      </footer>
+
 
       <%#link on homepage to log in page, and if logged in it also shows a log out link%>
       <% if current_admin %>
@@ -19,7 +26,5 @@
         <%= link_to 'Log in', '/login' %>
       <% end %>
 
-
-   
     </body>
 </html>
