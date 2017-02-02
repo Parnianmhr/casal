@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     devise_for :admins
 
     resources :bookings
-    resources :guests, only: [:create]
+    resources :villas
     resources :admins
 end

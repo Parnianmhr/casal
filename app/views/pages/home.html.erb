@@ -20,7 +20,7 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
 
@@ -59,10 +59,13 @@
                         <a class="page-scroll" href="#portfolio">Photos</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#widget">Reviews</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">info</a>
+                        <a class="page-scroll" href="#tarieven">Tarieven</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -325,109 +328,70 @@
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
+    <section id="tarieven" class="bg-light-gray">
         <div class="container">
+          <div class="text-center">
+            <h2 class="section-heading">Tarieven 2017</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          </div>
+          <p class="large text-muted">Wij hanteren een basisprijs voor acht personen.
+            In het hoogseizoen verhuren we per week èn is zaterdag de wisseldag om een goede aansluiting met
+            andere vakantieadressen te verzorgen. Buiten het hoogseizoen is een andere wisseldag èn
+            verblijf vanaf drie nachten mogelijk. De tarieven hieronder zijn op de weekprijs gebasseerd.</p>
+            <br>
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
+              <div class="col-lg-6">
+                <p>Laagseizoen:</p>
+                  <li>Periode: zaterdag 29 oktober t/m zaterdag 1 april 2017.</li>
+                  <li>Basisprijs: €1499,- voor acht personen.</li>
+                  <li>Elke persoon extra €140,- per week.</li>
+                  <br>
+                <p>Voorseizoen:</p>
+                  <li>Periode: zaterdag 1 april t/m zaterdag 24 juni.</li>
+                  <li>Basisprijs: €2499,- voor acht personen.</li>
+                  <li>Elke persoon extra €140,- per week.</li>
+                <br>
+                <p>Service en bijkomende kosten</p>
+                  <li>Waarborg: €500,- per verblijf (betaling bij boeking en is verplicht).</li>
+                  <li>Schoonmaakkosten en beddengoed zijn inbegrepen.</li>
+              </div>
+              <div class="col-lg-6">
+                <p>Hoogseizoen:</p>
+                  <li>Periode: zaterdag 24 juni t/m zaterdag 2 september.</li>
+                  <li>Basisprijs: €2999,- voor acht personen.</li>
+                  <li>Elke persoon extra €140,- per week.</li>
+
+                <p>Naseizoen:</p>
+                  <li>Periode: zaterdag 2 september t/m zaterdag 4 november.</li>
+                  <li>Basisprijs: €2499,- voor acht personen.</li>
+                  <li>Elke persoon extra €140,- per week.</li>
+              </div>
             </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Kay Garland</h4>
-                        <p class="text-muted">Lead Designer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-                </div>
-            </div>
-        </div>
+          </div>
     </section>
 
     <!-- Clients Aside -->
-    <aside class="clients">
-        <div class="container">
+    <aside id="widget">
+        <div class="container" style="margin-bottom: 25px">
             <div class="row">
-              <h2>We love <i class="fa fa-heart"></i> new friends!</h2>
-              <ul class="list-inline list-social">
-                <li class="social-twitter">
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li class="social-facebook">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li class="social-google-plus">
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                </li>
-             </ul>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
-                        <p>Facebook here</p>
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
-                        <p>tripadvisor here</p>
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                        <p>something else here</p>
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
-                        <p>macazun here</p>
-                    </a>
-                </div>
+              <h2>We love <i class="fa fa-heart"></i> Your suggestions!</h2>
+              <br>
+              <div class="col-md-3 col-sm-6">
+                <a href="//casalverde.reviewbuddy.com" id="reviewbuddylink"></a>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <!-- InstaWidget -->
+              <a href="https://instawidget.net/v/user/casalverde.eu" id="link-5c2d392db04c84977f55cba69c07841c294cf6df001814e14331cca17ae5e177">@casalverde.eu</a>
+              <script src="https://instawidget.net/js/instawidget.js?u=5c2d392db04c84977f55cba69c07841c294cf6df001814e14331cca17ae5e177&width=200px"></script>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <a target="_blank" href="https://www.tripadvisor.com/VacationRentalReview-g194720-d10356655-Cas_al_Verde-Castellina_In_Chianti_Tuscany.html"><img src="http://www.freeiconspng.com/uploads/tripadvisor-icon-13.jpg" width="180" height="250"/></a>
+                <script src="https://www.jscache.com/wejs?wtype=socialButtonIcon&amp;uniq=901&amp;locationId=187893&amp;color=green&amp;size=rect&amp;lang=en_US&amp;display_version=2"></script>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <a target="_blank" href="https://www.micazu.nl/vakantiehuis/italie/toscane/castellina-in-chianti/casal-verde-1402/"><img src="https://pbs.twimg.com/profile_images/688007580023586816/miN3yhcR.png" width="180" height= "250"/></a>
+              </div>
+              </div>
             </div>
         </div>
     </aside>
@@ -447,14 +411,18 @@
                         <div class="row">
                             <div class="col-md-6 intro-lead">
                               <p>Tel:</p>
-                              <p>Email: </p>
+                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i>Email:</p>
                             </div>
                             <div class="col-md-6">
 
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
-
+                              <div id="map"></div>
+                              <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+                              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+                              <script src="custom.js"></script>
                             </div>
                         </div>
                     </form>
@@ -675,20 +643,66 @@
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
-
+    <script src="vendor/jquery/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="vendor/gulpfile.js"></script>
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+    <script type="text/javascript">
+     (function() {
+     var rb = document.createElement('script'); rb.type = 'text/javascript'; rb.async = true;
+     rb.src = '//casalverde.reviewbuddy.com/widget.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(rb, s);
+     })();
+     </script>
 
+     <!-- Google map -->
+     <script>
+     $(function () {
+     function initMap() {
+        var location = new google.maps.LatLng(43.498771, 11.303928);
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+            center: location,
+            zoom: 8,
+            panControl: false,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var markerImage = 'http://res.cloudinary.com/casalverde/image/upload/v1485958763/marker_z4ru9u.png';
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            icon: markerImage
+        });
+        var contentString = '<div class="info-window">' +
+                '<h3>Info Window Content</h3>' +
+                '<div class="info-content">' +
+                '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
+                '</div>' +
+                '</div>';
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 400
+        });
+        marker.addListener('click', function () {
+            infowindow.open(map, marker);
+        });
+        var styles = [{"featureType": "landscape", "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]}];
+        map.set('styles', styles);
+    }
+       google.maps.event.addDomListener(window, 'load', initMap);
+     });
+</script>
 </body>
 
 </html>
