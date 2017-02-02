@@ -21,8 +21,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
 
-    if
-      @booking.available?(@booking.starts_at, @booking.ends_at)
+    if Booking.available?(@booking.starts_at, @booking.ends_at)
       # @booking.set_total_price
       @booking.save
       redirect_to @booking, notice: "Thank you for your request! You will receive an email from us within 5 days."
@@ -30,6 +29,7 @@ class BookingsController < ApplicationController
       redirect_to @booking, notice: "Sorry! Cas'al Verde is not available during the dates you requested. Available booking dates can be seen on the calender."
     end
   end
+
 
   def show
     @booking = Booking.find(params[:id])

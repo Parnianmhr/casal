@@ -47,8 +47,9 @@ class Booking < ApplicationRecord
     where('ends_at > ? AND ends_at < ?', arrival, departure)
   end
 
-  def available?(arrival, departure)
-    bookings.each do |booking|
+
+  def self.available?(arrival, departure)
+    all.each do |booking|
       if (booking.starts_at <= arrival) && (booking.ends_at >= departure)
         return false
       end
@@ -56,7 +57,6 @@ class Booking < ApplicationRecord
 
     true
   end
-
 
   # def available?(starts_at, ends_at)
   #   @bookings.each do |booking|
