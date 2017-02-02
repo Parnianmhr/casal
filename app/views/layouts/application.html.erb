@@ -17,6 +17,14 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
+
+      <%#link on homepage to log in page, and if logged in it also shows a log out link%>
+      <% if current_admin %>
+        Signed in as <%= current_admin.name %> | <%= link_to "Logout", '/logout' %>
+      <% else %>
+        <%= link_to 'Log in', '/login' %>
+      <% end %>
+      
       <footer>
         <p>&copy; Cas'al Verde</p>
       </footer>
