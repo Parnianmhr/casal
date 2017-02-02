@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
     get 'pages/home'
     root to: 'pages#home'
-    
+
     resources :bookings
-    resources :villas
+    resources :seasons
     resources :admins
+    resources :pages
 end
