@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
     resources :bookings
     resources :seasons
-    resources :admins
+    resources :sessions, only:[:new, :create, :destroy]
+    resources :admins, only:[:new, :create, :index]
     resources :pages
 end
