@@ -8,8 +8,12 @@ Rails.application.routes.draw do
       resources :admins, only:[:index]
     end
     resources :seasons
-    resources :sessions, only:[:new, :create, :destroy]
-    resources :admins, only:[:new, :create, :index]
     resources :pages
 
+    get '/login' => 'sessions#new'
+    post '/login' => 'sessions#create'
+    get '/logout' => 'sessions#destroy'
+
+    get '/signup' => 'admins#new'
+    post '/admins' => 'admins#create'
 end
