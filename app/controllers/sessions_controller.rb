@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = Admin.find_by_email(params[:email])
+    admin = Admin.find_by_email(params[:email])
      # If the admin exists AND the password entered is correct.
      if admin && admin.authenticate(params[:password])
        # Save the user id inside the browser cookie. This is how we keep the admin
