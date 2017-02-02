@@ -43,14 +43,14 @@ class Booking < ApplicationRecord
   end
 
   def get_dates(booking_params)
-    checkin = Date.new(booking_params["starts_at(1i)"].to_i,
+    arrival = Date.new(booking_params["starts_at(1i)"].to_i,
     booking_params["starts_at(2i)"].to_i,
     booking_params["starts_at(3i)"].to_i)
 
-    checkout = Date.new(booking_params["ends_at(1i)"].to_i,
+    departure = Date.new(booking_params["ends_at(1i)"].to_i,
     booking_params["ends_at(2i)"].to_i,
     booking_params["ends_at(3i)"].to_i)
-      return checkin, checkout
+      return arrival, departure
   end
 
   private
