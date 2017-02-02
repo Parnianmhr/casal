@@ -14,8 +14,13 @@
             <td> Number of guests: <%= @booking.number_of_guests %> </td>
             <td> Guest address: <%= @booking.street_name, @booking.house_number @booking.zipcode, @booking.city_of_residence, @booking.country_of_residence %> </td>
             <td> Guest contact details: <%= @booking.email_address, @booking.phone_number %> </td>
+
             <!-- <td> <%= if booking.confirmed == true { puts "Confirmed booking."} %>
                 <%=  else {puts "Optional booking."} <%> </td> -->
+
+            <td> <%= if booking.confirmed == true { puts "Confirmed booking."} %>
+                <%=  else {puts "Optional booking."} <%> </td>
+
           </tr>
         <% end %>
       </tbody>

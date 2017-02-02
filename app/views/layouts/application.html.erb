@@ -10,12 +10,16 @@
 
     <body>
 
+      <div>
+      <%= yield %>
+      </div>
+
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
-      <div class="container">
-      <%= yield %>
+      <footer>
+        <p>&copy; Cas'al Verde</p>
+      </footer>
 
-    </div>
     </body>
 </html>

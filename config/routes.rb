@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     resources :sessions, only:[:new, :create, :destroy]
     resources :admins, only:[:new, :create, :index]
     resources :pages
+
 end
