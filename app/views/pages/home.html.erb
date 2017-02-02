@@ -67,6 +67,9 @@
                     <li>
                         <a class="page-scroll" style="color:#fed136" href="#tarieven">Tarieven</a>
                     </li>
+
+                    <li><%= link_to "Booking", new_booking_path, :class => "btn btn-primary"%></li>
+
                     <li>
                         <a class="page-scroll" style="color:#fed136" href="#contact">Contact</a>
                     </li>
@@ -430,6 +433,13 @@
             </div>
         </div>
     </section>
+
+    <%#link on homepage to log in page, and if logged in it also shows a log out link%>
+    <% if current_admin %>
+      Signed in as <%= current_admin.name %> | <%= link_to "Logout", '/logout' %>
+    <% else %>
+      <%= link_to 'Log in', '/login' %>
+    <% end %>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
