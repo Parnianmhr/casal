@@ -1,14 +1,22 @@
 class BookingsController < ApplicationController
 
   def index
+    @bookings = Booking.all(params[:id])
     @booking = Booking.new
     @guest = Guest.new
   end
 
   def create
-    @booking = Booking.new
+    @booking = bookings.new(booking_params)
 
-    redirect_to bookings_path, notice: "Thank you for your booking!"
+    if
+      @booking.available?
+      @booking.set_total_price
+      @booking.save
+      redirect_to @booking.room, notice: "Thank you for booking!"
+    else
+      redirect_to @booking.room, notice: "Sorry! Cas'al Verde is not available during the dates you requested."
+    end
   end
 
 
