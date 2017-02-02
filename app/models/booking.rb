@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
-  belongs_to :villa
+  belongs_to :season
 
   validates :first_name, presence: true
   validates :last_name, presence: true
