@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
 
   def index
-    before_filter :authorize #zorgt ervoor dat de persoon eerst in moet loggen
+    before_filter :authorize #makes the person/admin log in first
 
     @bookings = Booking.all(params[:id])
     @booking = Booking.new
