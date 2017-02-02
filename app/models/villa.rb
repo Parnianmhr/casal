@@ -11,4 +11,5 @@ class Villa < ApplicationRecord
     true
   end
 
+
 end

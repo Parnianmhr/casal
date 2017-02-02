@@ -1,9 +1,20 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.all(params[:id])
     @booking = Booking.new
   end
+
+  def create
+    @booking = bookings.new(booking_params)
+
+    if
+      @booking.available?
+      @booking.set_total_price
+      @booking.save
+      redirect_to @booking.room, notice: "Thank you for request! You will receive an emailn from us within 5 days."
+    else
+      redirect_to @booking.room, notice: "Sorry! Cas'al Verde is not available during the dates you requested. Available booking dates can be seen on the calender."
 
   def show
     @booking = Booking.find(params[:id])
@@ -11,20 +22,6 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-  end
-
-  def create
-    @booking = Booking.create(booking_params)
-
-    if @booking.save
-
-    redirect_to new_booking_path, notice: "Fill out your personal details here!"
-
-    else
-
-    render :show
-
-    end
   end
 
 
