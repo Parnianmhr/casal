@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     root to: 'pages#home'
 
     resources :bookings
-    resources :villas
+    resources :seasons
     resources :sessions, only:[:new, :create, :destroy]
-    resources :admins, only: [:new, :create, :index]
+    resources :admins, only:[:new, :create, :index]
+    resources :pages
+
 end
