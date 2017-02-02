@@ -13,9 +13,9 @@ class BookingsController < ApplicationController
       @booking.available?
       @booking.set_total_price
       @booking.save
-      redirect_to @booking.room, notice: "Thank you for booking!"
+      redirect_to @booking.room, notice: "Thank you for request! You will receive an emailn from us within 5 days."
     else
-      redirect_to @booking.room, notice: "Sorry! Cas'al Verde is not available during the dates you requested."
+      redirect_to @booking.room, notice: "Sorry! Cas'al Verde is not available during the dates you requested. Available booking dates can be seen on the calender."
     end
   end
 
