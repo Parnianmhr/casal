@@ -1,9 +1,8 @@
   <%= render 'shared/navbar' %>
+
 <h1 class="title">Fill out your details here and confirm your booking!</h1>
 
-<hr>
-
-<div>
+<div id="form">
   <%= form_for @booking do |f| %>
     <p><%= f.label "Check In:" %>
     <%= f.date_field :starts_at %></p>

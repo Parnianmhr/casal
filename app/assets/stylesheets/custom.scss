@@ -1,11 +1,3 @@
-body {
-  padding-top: 70px;
-}
-
-.title {
-  margin-top: -50px;
-}
-
 footer {
   margin-bottom: -50px;
   width: 100%;
@@ -13,4 +5,19 @@ footer {
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
   text-align: center;
+}
+
+.title {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: red;
+  font-weight: bold;
+}
+
+#form {
+  margin-top: 50px;
+  margin-left: 30px;
 }
