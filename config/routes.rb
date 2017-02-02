@@ -3,8 +3,10 @@ Rails.application.routes.draw do
 
     get 'pages/home'
     root to: 'pages#home'
-    
+
     resources :bookings
     resources :villas
-    resources :admins
+    #Admin routes
+    get '/signup' => 'admins#new'
+    post '/users' => 'admins#create'
 end
