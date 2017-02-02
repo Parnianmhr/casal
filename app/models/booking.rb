@@ -1,5 +1,7 @@
 class Booking < ApplicationRecord
+
   belongs_to :season
+
 
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -11,6 +13,8 @@ class Booking < ApplicationRecord
   validates :country_of_residence, presence: true
   validates :phone_number, presence: true
   validates :email_address, presence: true
+
+
 
   before_create :set_check_in_times
 
@@ -58,6 +62,7 @@ class Booking < ApplicationRecord
     self.starts_at = starts_at.change(hour: 14, min: 00)
     self.ends_at = ends_at.change(hour: 10, min: 00)
   end
+
 
 
 end

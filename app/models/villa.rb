@@ -1,5 +1,4 @@
 class Villa < ApplicationRecord
-  has_many :bookings
 
   def available?(checkin, checkout)
     bookings.each do |booking|
