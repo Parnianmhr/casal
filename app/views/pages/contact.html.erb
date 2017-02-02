@@ -1,0 +1,71 @@
+
+<%= render 'shared/navbar' %>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Contact Us</h2>
+                <h3 class="section-subheading text-muted">Strade di Tregole 79
+                Castellina in Chianti <br/> 53011 Italy. <br/> +31 6 510 697 87</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="row">
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 text-center">
+                          <div id="map"></div>
+                          <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+                          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+                          <script src="custom.js"></script>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Google map -->
+<script>
+$(function () {
+function initMap() {
+   var location = new google.maps.LatLng(43.498771, 11.303928);
+   var mapCanvas = document.getElementById('map');
+   var mapOptions = {
+       center: location,
+       zoom: 8,
+       panControl: false,
+       scrollwheel: false,
+       mapTypeId: google.maps.MapTypeId.ROADMAP
+   }
+   var map = new google.maps.Map(mapCanvas, mapOptions);
+   var markerImage = 'http://res.cloudinary.com/casalverde/image/upload/v1485958763/marker_z4ru9u.png';
+   var marker = new google.maps.Marker({
+       position: location,
+       map: map,
+       icon: markerImage
+   });
+   var contentString = '<div class="info-window">' +
+           '<h3>Info Window Content</h3>' +
+           '<div class="info-content">' +
+           '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
+           '</div>' +
+           '</div>';
+   var infowindow = new google.maps.InfoWindow({
+       content: contentString,
+       maxWidth: 400
+   });
+   marker.addListener('click', function () {
+       infowindow.open(map, marker);
+   });
+   var styles = [{"featureType": "landscape", "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]}];
+   map.set('styles', styles);
+}
+  google.maps.event.addDomListener(window, 'load', initMap);
+});
+</script>

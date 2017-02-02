@@ -1,6 +1,8 @@
 class Booking < ApplicationRecord
 
   belongs_to :admin
+  belongs_to :season
+
 
   #
   # validates :first_name, presence: true
@@ -13,8 +15,6 @@ class Booking < ApplicationRecord
   # validates :country_of_residence, presence: true
   # validates :phone_number, presence: true
   # validates :email_address, presence: true
-
-
 
   # before_create :set_check_in_times
 
@@ -47,9 +47,10 @@ class Booking < ApplicationRecord
     where('ends_at > ? AND ends_at < ?', arrival, departure)
   end
 
-  def available?(starts_at, ends_at)
-    @bookings.each do |booking|
-      if (booking.starts_at <= ends_at) && (booking.start_date >= starts_at)
+
+  def self.available?(arrival, departure)
+    all.each do |booking|
+      if (booking.starts_at <= arrival) && (booking.ends_at >= departure)
         return false
       end
     end
@@ -57,17 +58,25 @@ class Booking < ApplicationRecord
     true
   end
 
+  # def available?(starts_at, ends_at)
+  #   @bookings.each do |booking|
+  #     if (booking.starts_at <= ends_at) && (booking.start_date >= starts_at)
+  #       return false
+  #     end
+  #   end
+  #
+  #   true
+  # end
 
+  # def booking_available?
+  #   booking.available? starts_at, ends_at
+  # end
 
-  def booking_available?
-    @booking.available? starts_at, ends_at
-  end
-
-  def get_dates(booking_params)
-    checkin = Date.new(booking_params["starts_at(1i)"].to_i)
-    checkout = Date.new(booking_params["ends_at(1i)"].to_i)
-      return checkin, checkout
-  end
+  # def get_dates(booking_params)
+  #   checkin = Date.new(booking_params["starts_at(1i)"].to_i)
+  #   checkout = Date.new(booking_params["ends_at(1i)"].to_i)
+  #     return checkin, checkout
+  # end
 
 
   private
