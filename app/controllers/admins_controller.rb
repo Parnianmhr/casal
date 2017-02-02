@@ -1,22 +1,20 @@
 class AdminsController < ApplicationController
-  def store_action
-    return unless request.get?
-      if (request.path != "/users/sign_in" &&
-        request.path != "/users/sign_up" &&
-        request.path != "/users/password/new" &&
-        request.path != "/users/password/edit" &&
-        request.path != "/users/confirmation" &&
-        request.path != "/users/sign_out" &&
-        !request.xhr?) # don't store ajax calls
-      store_location_for(:admin, request.fullpath)
+  def new
+  end
+
+  def create
+    admin = Admin.new(admin_params)
+      if admin.save
+        session[:admin_id] = admin.id
+        redirect_to '/'
+      else
+        redirect_to 'new', notice: "Creating new admin failed, please try again"
       end
   end
 
-  def after_sign_out_path_for(resource_or_scope)
-    whatever_path
-  end
+private
 
-  def show
-    @admins = Admin.all
+  def admin_params
+    params.require(:admin).permit(:name, :email, :password, :password_confirmation)
   end
 end
