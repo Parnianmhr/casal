@@ -22,10 +22,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    get_dates(booking_params)
 
     if
-      @booking.available?
+      @booking.available?(@booking.starts_at, @booking.ends_at)
       # @booking.set_total_price
       @booking.save
       redirect_to @booking, notice: "Thank you for your request! You will receive an email from us within 5 days."
@@ -42,11 +41,11 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
-  def get_dates(booking_params)
-    starts_at = Datetime.new(booking_params["starts_at(1i)"])
-    ends_at = Datetime.new(booking_params["ends_at(1i)"])
-      return starts_at, ends_at
-  end
+  # def get_dates(booking_params)
+  #   starts_at = Datetime.new(booking_params["starts_at(1i)"])
+  #   ends_at = Datetime.new(booking_params["ends_at(1i)"])
+  #     return starts_at, ends_at
+  # end
 
 
   private
