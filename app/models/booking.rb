@@ -43,6 +43,57 @@ class Booking < ApplicationRecord
   end
 
 
+
+  def get_dates(booking_params)
+    checkin = Date.new(booking_params["starts_at(1i)"].to_i,
+    booking_params["starts_at(2i)"].to_i,
+    booking_params["starts_at(3i)"].to_i)
+
+    checkout = Date.new(booking_params["ends_at(1i)"].to_i,
+    booking_params["ends_at(2i)"].to_i,
+    booking_params["ends_at(3i)"].to_i)
+      return checkin, checkout
+  end
+
+  def check_season(checkin, checkout)
+    villa.each do |booking|
+    if (booking.starts_at <= checko) && (booking.ends_at >= checkin)
+      return false
+    end
+  end
+
+
+
+
+
+  def check_season
+    @villa.each do |season|
+      if ('starts_at > 2016.10.28 AND starts_at < 2017.4.1', arrival, arrival)
+        @season = {season: "1"}
+      end
+
+      elsif ('starts_at > 2017.4.2 AND starts_at > 2017.6.24', arrival, arrival)
+        @season = {season: "2"}
+      end
+
+      elsif ('starts_at > 2017.6.24 AND 'starts_at' > 2017.6.25', arrival, arrival)
+        @season = {season: "3"}end
+      end
+
+      elsif ('starts_at > 2016.9.2 AND starts_at > 2017.11.4', arrival, arrival)
+        @season = {season: "4"}
+      end
+
+      else
+      puts "wrong input"
+      redirect_to bookings_path
+      end
+  end
+
+
+
+
+
   private
   def check_in_times
     self.starts_at = starts_at.change(hour: 14, min: 00)
