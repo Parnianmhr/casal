@@ -1,22 +1,36 @@
 class BookingsController < ApplicationController
 
   def index
-    before_filter :authorize #makes the person/admin log in first
+    @bookings = Booking.all
 
-    @bookings = Booking.all(params[:id])
-    @booking = Booking.new
+    before_filter :authorize #makes the person/admin log in first
   end
 
+# Villa Model
+  # def create
+  #   @booking = Booking.new(booking_params)
+  #
+  #   if @booking.villa_available?
+  #     # @booking.set_total_price
+  #     @booking.save
+  #     redirect_to @booking, notice: "Thank you for booking!"
+  #   else
+  #     redirect_to @booking, notice: "Sorry! This listing is not available during the dates you requested."
+  #   end
+  # end
+
+
   def create
-    @booking = bookings.new(booking_params)
+    @booking = Booking.new(booking_params)
+    get_dates(booking_params)
 
     if
       @booking.available?
-      @booking.set_total_price
+      # @booking.set_total_price
       @booking.save
-      redirect_to @booking.room, notice: "Thank you for your request! You will receive an email from us within 5 days."
+      redirect_to @booking, notice: "Thank you for your request! You will receive an email from us within 5 days."
     else
-      redirect_to @booking.room, notice: "Sorry! Cas'al Verde is not available during the dates you requested. Available booking dates can be seen on the calender."
+      redirect_to @booking, notice: "Sorry! Cas'al Verde is not available during the dates you requested. Available booking dates can be seen on the calender."
     end
   end
 
@@ -26,6 +40,12 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+  end
+
+  def get_dates(booking_params)
+    starts_at = Datetime.new(booking_params["starts_at(1i)"])
+    ends_at = Datetime.new(booking_params["ends_at(1i)"])
+      return starts_at, ends_at
   end
 
 

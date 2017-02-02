@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
 
-  belongs_to :season
+  # belongs_to :villa
 
 
   validates :first_name, presence: true
@@ -18,6 +18,11 @@ class Booking < ApplicationRecord
 
   before_create :set_check_in_times
 
+  # def villa_available?
+  #   villa.available? starts_at, ends_at
+  # end
+
+
   def self.during arrival, departure
     arrival = arrival.change(hour: 14, min: 00)
     departure = departure.change(hour: 10, min: 00)
@@ -25,7 +30,7 @@ class Booking < ApplicationRecord
   end
 
   def set_total_price
-    self.price = villa.season.price
+    self.price = booking.price
     total_days = (ends_at.to_date - starts_at.to_date).to_i
     self.total = price * total_days
   end
@@ -42,8 +47,20 @@ class Booking < ApplicationRecord
     where('ends_at > ? AND ends_at < ?', arrival, departure)
   end
 
-  def villa_available?
-    villa.available? starts_at, ends_at
+  def available?(starts_at, ends_at)
+    @bookings.each do |booking|
+      if (booking.starts_at <= ends_at) && (booking.start_date >= starts_at)
+        return false
+      end
+    end
+
+    true
+  end
+
+
+
+  def booking_available?
+    @booking.available? starts_at, ends_at
   end
 
   def get_dates(booking_params)
@@ -51,6 +68,7 @@ class Booking < ApplicationRecord
     checkout = Date.new(booking_params["ends_at(1i)"].to_i)
       return checkin, checkout
   end
+
 
   private
   def check_in_times
