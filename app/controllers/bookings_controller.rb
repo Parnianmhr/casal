@@ -14,23 +14,18 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.create(booking_params)
+    @booking = Booking.new(booking_params)
 
-    if @booking.save
+    @booking.save
 
-    redirect_to new_booking_path, notice: "Fill out your personal details here!"
-
-    else
-
-    render :show
-
-    end
+    redirect_to booking_path, notice: "This is the notice in the bookingscontroller" 
   end
 
 
   private
 
   def booking_params
-    params.require(:booking).permit(:starts_at, :ends_at)
+    params.require(:booking).permit(:starts_at, :ends_at, :number_of_guests, :prefix, :first_name,
+    :last_name, :date_of_birth, :street_name, :house_number, :zipcode, :city_of_residence, :country_of_residence, :phone_number, :email_address)
   end
 end
