@@ -1,83 +1,708 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap 101 Template</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-                <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-                <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="item">
-                    <img class="first-slide" src="http://res.cloudinary.com/casalverde/image/upload/v1485868411/Casalverde_fotograaf_20_2824_29-5138x3356_mrfe2w.jpg" alt="First slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Example headline.</h1>
-                            <p>Rust, natuurschoon, privacy in het hartje van het Chianti gebied in Toscane</p>
-                            <p>
-                                <a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a>
-                            </p>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Casal Verde</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- Theme CSS -->
+    <link href="css/agency.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Cas'al Verde</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Villa</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Photos</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#widget">Reviews</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#tarieven">Tarieven</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading">Italië, Cas'al Verde!!</div>
+                <div class="intro-lead-in">Rust, natuurschoon, privacy in het hartje van het Chianti gebied in Toscane</div>
+                <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <div id="services" style="padding: 100px 0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Onze Villa</h2>
+                    <h3 class="section-subheading text-muted">Welkom in Italië, welkom in Cas'al Verde!</h3>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-muted">
+                    <p>Onze villa, gelegen op loopafstand van Tregole in het beroemde wijngebied van de Chianti Classico, beschikt over vijf royale slaapkamers en drie badkamers. De villa ligt centraal tussen wijngaarden, olijfbomen en bossen waardoor u in een gebied verblijft van privacy, rust en natuurschoon. In de tuin is een groot zwembad, een kinderspeelplaats, verschillende terrassen (met zon en schaduwplekken). Allen met een prachtig uitzicht! Wanneer u gezamenlijk wilt dineren kunt u de pizza-oven of de barbecue in de arcade gebruiken om heerlijke gerechten uit het lokale gebied klaar te maken, waarna u het kunt serveren op de lange Toscaanse tafel. De omgeving is veilig voor kinderen. Deze luxe locatie is geschikt voor maximaal 16 personen en beschikt over faciliteiten die het verblijf een stuk leuker en gemakkelijk maken. </p>
+                    <p>Het op loopafstand gelegen Tregole is een klein gehucht zonder winkels, maar de nabij gelegen steden, zoals Castellina in Chianti, Siena en Florence zijn goed te bereiken met de auto of de fiets. Afstanden: Tregole 500m, Castellina in Chianti (onder meer supermarkt, restaurants, bars, dokter, apotheek, kerk) 3km, San Gimignano 22km, Siena 24km, Florence 35km</p>
+                    <p>Qua mountainbiken en wielrennen is deze omgeving perfect: prachtige wegen, afwisselende klims en mooie vergezichten gecombineerd met historische dorpjes en steden. De buren, Brancaia en Fonterutoli, verkopen één van de beste wijnen van Italië, die waarschijnlijk goed zullen aansluiten bij het zelf klaargemaakte diner. Mocht u zelf niet willen koken; onze beheerder is gediplomeerd kok. Met hem kunt u afspraken maken over een Toscaanse kookworkshop, een pizza-avond of zelfs een gehele lokale maaltijd laten verzorgen.</p>
+                    <p>Faciliteiten:</p>
+                        <ul>
+                            <li> Privé zwembad (12,5 bij 5 meter, diepte: 0,8 - 2,5 meter)</li>
+                            <li>Gratis internet</li>
+                            <li>Pizzaoven</li>
+                            <li>Barbecue</li>
+                            <li>Afwasmachine</li>
+                            <li>Wasmachine</li>
+                            <li>Bibliotheek</li>
+                            <li>Kinderspeelplaats</li>
+                            <li>Tafeltennistafel</li>
+                            <li>Jeu de Boules</li>
+                            <li>Hangmat</li>
+                            <li>Mountainbikes</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Pothos</h2>
+                    <h3 class="section-subheading text-muted">Kijken naar onze mooie villa</h3>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://res.cloudinary.com/casalverde/image/upload/v1485868284/Casalverde_fotograaf_20_2828_29-5760x3840_pwrspt.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://res.cloudinary.com/casalverde/image/upload/v1485868355/Casalverde_fotograaf_20_2826_29-5760x3840_nlan3q.jpg" alt="">
+                    </a>
+                </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://res.cloudinary.com/casalverde/image/upload/v1485868411/Casalverde_fotograaf_20_2824_29-5138x3356_mrfe2w.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#">
+                        <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Woonkamer</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Onze Toscaans ingerichte woonkamer van 28 vierkante meter beschikt over vele gemakken zoals:
+                                            Televisie met schotelantenne
+                                            (alle Nederlandse zenders)
+                                            DVD speler
+                                            Bose geluidsinstallatie
+                                            Bibliotheek
+                                            Twee zitbanken
+                                            Fauteuil
+                                            Speksteenkachel
+                                            Eettafel met stoelen
+                                            gratis WiFi</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Keuken</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Als u van uitgebreid koken houdt of snel een hap in elkaar zet; deze keuken is uitermate geschikt. Naast alle ruimte heeft u de beschikking over een zes pits fornuis met dubbele oven en grillplaat.
+                                    Eettafel
+                                    Koelkast met vriesvak
+                                    Vaatwasmachine
+                                    Bestek, borden, bekers en kookgerei
+                                    Koffiezetapparaat Nespresso (cupjes bij ons verkrijgbaar)
+                                    Waterkoker
+                                    Kruiden van lokale kweker</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Rondom de villa</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Vanuit het zwembad heeft u een weids uitzicht op de Toscaanse heuvels. Het bad is 12 meter lang en 4,5 meter breed. Het zwembad is voorzien van onderwaterverlichting.
+                                    Speeltoestel kinderen (schommel en glijbaan)
+                                    Trampoline (ingegraven)
+                                    Tafeltennistafel
+                                    Twee mountainbikes (m/v)
+                                    Hangmat
+                                    Jeu de boules
+                                    Wasmachine</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Terrassen</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Rondom de villa zijn diverse terrassen. Op het hoofdterras heeft u een schitterend uitzicht op de heuvels van de Chianti streek, het nabijgelegen gehucht Tregole en in de verte de Apennijnen. Rondom het huis zijn er nog meer, voor de bezoeker nader te ontdekken, terrassen. Op de terrassen zijn stoelen, kussens, tafels en parasol beschikbaar.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Slaapkamers</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">In totaal zijn er vijf slaapkamers met vijftien bedden in de villa aanwezig. Alle slaapkamers hebben een grote linnenkast en schoon linnengoed is aanwezig. Ook zijn er twee babybedden beschikbaar.
+                                    Slaapkamer 1: tweepersoonsbed
+                                    Slaapkamer 2: tweepersoonsbed
+                                    Slaapkamer 3: tweepersoonsbed en enkel bed
+                                    Slaapkamer 4: tweepersoonsbed en enkel bed
+                                    Slaapkamer 5: tweepersoonsbed en drie enkele bedden</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="subheading">Arcade</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">In de arcade kunt u gebruik van een pizzaoven, barbecue, lange eettafel met stoelen. U kunt onze beheerder, kok van beroep, inhuren. Samen met of voor u bereidt hij de heerlijkste pizza's of zelfs een gehele Toscaanse maaltijd.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>Be Part
+                                    <br>Of Our
+                                    <br>Story!</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="tarieven" class="bg-light-gray">
+        <div class="container">
+          <div class="text-center">
+            <h2 class="section-heading">Tarieven 2017</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          </div>
+          <p class="large text-muted">Wij hanteren een basisprijs voor acht personen.
+            In het hoogseizoen verhuren we per week èn is zaterdag de wisseldag om een goede aansluiting met
+            andere vakantieadressen te verzorgen. Buiten het hoogseizoen is een andere wisseldag èn
+            verblijf vanaf drie nachten mogelijk. De tarieven hieronder zijn op de weekprijs gebasseerd.</p>
+            <br>
+            <div class="row">
+              <div class="col-lg-6">
+                <p>Laagseizoen:</p>
+                  <li>Periode: zaterdag 29 oktober t/m zaterdag 1 april 2017.</li>
+                  <li>Basisprijs: €1499,- voor acht personen.</li>
+                  <li>Elke persoon extra €140,- per week.</li>
+                  <br>
+                <p>Voorseizoen:</p>
+                  <li>Periode: zaterdag 1 april t/m zaterdag 24 juni.</li>
+                  <li>Basisprijs: €2499,- voor acht personen.</li>
+                  <li>Elke persoon extra €140,- per week.</li>
+                <br>
+                <p>Service en bijkomende kosten</p>
+                  <li>Waarborg: €500,- per verblijf (betaling bij boeking en is verplicht).</li>
+                  <li>Schoonmaakkosten en beddengoed zijn inbegrepen.</li>
+              </div>
+              <div class="col-lg-6">
+                <p>Hoogseizoen:</p>
+                  <li>Periode: zaterdag 24 juni t/m zaterdag 2 september.</li>
+                  <li>Basisprijs: €2999,- voor acht personen.</li>
+                  <li>Elke persoon extra €140,- per week.</li>
+
+                <p>Naseizoen:</p>
+                  <li>Periode: zaterdag 2 september t/m zaterdag 4 november.</li>
+                  <li>Basisprijs: €2499,- voor acht personen.</li>
+                  <li>Elke persoon extra €140,- per week.</li>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <!-- Clients Aside -->
+    <aside id="widget">
+        <div class="container" style="margin-bottom: 25px">
+            <div class="row">
+              <h2>We love <i class="fa fa-heart"></i> Your suggestions!</h2>
+              <br>
+              <div class="col-md-3 col-sm-6">
+                <a href="//casalverde.reviewbuddy.com" id="reviewbuddylink"></a>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <!-- InstaWidget -->
+              <a href="https://instawidget.net/v/user/casalverde.eu" id="link-5c2d392db04c84977f55cba69c07841c294cf6df001814e14331cca17ae5e177">@casalverde.eu</a>
+              <script src="https://instawidget.net/js/instawidget.js?u=5c2d392db04c84977f55cba69c07841c294cf6df001814e14331cca17ae5e177&width=200px"></script>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <a target="_blank" href="https://www.tripadvisor.com/VacationRentalReview-g194720-d10356655-Cas_al_Verde-Castellina_In_Chianti_Tuscany.html"><img src="http://www.freeiconspng.com/uploads/tripadvisor-icon-13.jpg" width="180" height="250"/></a>
+                <script src="https://www.jscache.com/wejs?wtype=socialButtonIcon&amp;uniq=901&amp;locationId=187893&amp;color=green&amp;size=rect&amp;lang=en_US&amp;display_version=2"></script>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <a target="_blank" href="https://www.micazu.nl/vakantiehuis/italie/toscane/castellina-in-chianti/casal-verde-1402/"><img src="https://pbs.twimg.com/profile_images/688007580023586816/miN3yhcR.png" width="180" height= "250"/></a>
+              </div>
+              </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 intro-lead">
+                              <p>Tel:</p>
+                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i>Email:</p>
+                            </div>
+                            <div class="col-md-6">
+
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                              <div id="map"></div>
+                              <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+                              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+                              <script src="custom.js"></script>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Your Website 2016</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <img class="second-slide" src="http://res.cloudinary.com/casalverde/image/upload/v1485868203/IMG_5640-2448x2448_jcp0x5.jpg" alt="Second slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Miljoenen toeristen bezoeken jaarlijks de meest klassieke streek van Italië met haar monumentale steden Firenze (Florence), Siena, Pisa, Arezzo en Lucca.
-                            </p>
-                            <p>
-                                <a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item active">
-                    <img class="third-slide" src="http://res.cloudinary.com/casalverde/image/upload/v1485868158/Casalverde_fotograaf_20_2817_29-5760x3840_pocseu.jpg" alt="Third slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>One more for good measure.</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p>
-                                <a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a>
-                            </p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <p>
+                                    <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
+                                <ul class="list-inline">
+                                    <li>Date: July 2014</li>
+                                    <li>Client: Round Icons</li>
+                                    <li>Category: Graphic Design</li>
+                                </ul>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-        <div>
-            <a href="#1">Go To 1</a>
-            <a href="#2">Go To 2</a>
-            <a href="#3">Go To 3</a>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Project Heading</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
+                                <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
+                                <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="1">
-            <p>photos</p>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
+                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="2">
-            <p>info</p>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/golden-preview.png" alt="">
+                                <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
+                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="3">
-            <p>map</p>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/escape-preview.png" alt="">
+                                <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
+                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-    </body>
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/dreams-preview.png" alt="">
+                                <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
+                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="vendor/gulpfile.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/agency.min.js"></script>
+    <script type="text/javascript">
+     (function() {
+     var rb = document.createElement('script'); rb.type = 'text/javascript'; rb.async = true;
+     rb.src = '//casalverde.reviewbuddy.com/widget.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(rb, s);
+     })();
+     </script>
+
+     <!-- Google map -->
+     <script>
+     $(function () {
+     function initMap() {
+        var location = new google.maps.LatLng(43.498771, 11.303928);
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+            center: location,
+            zoom: 8,
+            panControl: false,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var markerImage = 'http://res.cloudinary.com/casalverde/image/upload/v1485958763/marker_z4ru9u.png';
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            icon: markerImage
+        });
+        var contentString = '<div class="info-window">' +
+                '<h3>Info Window Content</h3>' +
+                '<div class="info-content">' +
+                '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
+                '</div>' +
+                '</div>';
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 400
+        });
+        marker.addListener('click', function () {
+            infowindow.open(map, marker);
+        });
+        var styles = [{"featureType": "landscape", "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]}];
+        map.set('styles', styles);
+    }
+       google.maps.event.addDomListener(window, 'load', initMap);
+     });
+</script>
+</body>
+
 </html>

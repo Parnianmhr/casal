@@ -1,19 +1,7 @@
-<h1>Book your stay in paradise here!</h1>
+<h1>Overview of bookings</h1>
 
-
-<div>
-    <div>
-      <%= form_for @booking do |f| %>
-        <p><%= f.label "Check In:" %>
-        <%= f.date_select :starts_at %></p>
-        <p><%= f.label "Check Out:" %>
-          <%= f.date_select :ends_at %></p>
-        <%= f.submit "Book now!" %>
-      <% end %>
-    </div>
-
-      <hr>
-
-      <%= render '/guests/guest' %>
-
-</div>
+<ul>
+  <% @bookings.each do |booking| %>
+    <li><p><%= booking.id %> <%= booking.starts_at %> <%= booking.ends_at %> </p></li>
+  <% end %>
+</ul>

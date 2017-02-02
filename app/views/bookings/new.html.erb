@@ -1,0 +1,42 @@
+
+
+
+<h1>Fill out your details here and confirm your booking!</h1>
+
+<hr>
+
+<div>
+  <%= form_for @booking do |f| %>
+    <p><%= f.label "Check In:" %>
+    <%= f.date_field :starts_at %></p>
+    <p><%= f.label "Check Out:" %>
+      <%= f.date_field :ends_at %></p>
+    <p><%= f.label "Number of guests:" %>
+      <%= f.number_field :number_of_guests %></p>
+    <hr>
+    <p><%= f.label "Prefix:" %>
+    <%= f.text_field :prefix %></p>
+    <p><%= f.label "First name:" %>
+    <%= f.text_field :first_name %></p>
+    <p><%= f.label "Last name:" %>
+    <%= f.text_field :last_name %></p>
+    <p><%= f.label "Date of birth:" %>
+    <%= f.date_field :date_of_birth %></p>
+    <p><%= f.label "Street:" %>
+    <%= f.text_field :street_name %></p>
+    <p><%= f.label "Streetnumber:" %>
+    <%= f.number_field :house_number %></p>
+    <p><%= f.label "ZIP-code:" %>
+    <%= f.text_field :zipcode %></p>
+    <p><%= f.label "City:" %>
+    <%= f.text_field :city_of_residence %></p>
+    <p><%= f.label "Country:" %>
+    <%= f.text_field :country_of_residence %></p>
+    <p><%= f.label "Phonenumber:" %>
+    <%= f.text_field :phone_number %></p>
+    <p><%= f.label "Email address:" %>
+    <%= f.text_field :email_address %></p>
+    <hr>
+    <%= f.submit :save %>
+<% end %>
+</div>

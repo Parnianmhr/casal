@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202092213) do
+ActiveRecord::Schema.define(version: 20170202095127) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,10 +21,23 @@ ActiveRecord::Schema.define(version: 20170202092213) do
     t.datetime "ends_at"
     t.decimal  "price"
     t.decimal  "total"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.integer  "guest_id"
     t.integer  "villa_id"
+    t.integer  "number_of_guests"
+    t.string   "prefix"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.date     "date_of_birth"
+    t.string   "street_name"
+    t.integer  "house_number"
+    t.string   "zipcode"
+    t.string   "city_of_residence"
+    t.string   "country_of_residence"
+    t.string   "phone_number"
+    t.string   "email_address"
+    t.boolean  "confirmed"
     t.index ["guest_id"], name: "index_bookings_on_guest_id", using: :btree
     t.index ["villa_id"], name: "index_bookings_on_villa_id", using: :btree
   end
@@ -63,6 +77,16 @@ ActiveRecord::Schema.define(version: 20170202092213) do
     t.string   "image_field8"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "seasons", force: :cascade do |t|
+    t.date     "start"
+    t.date     "end"
+    t.decimal  "basic_price"
+    t.decimal  "extra_price"
+    t.decimal  "discount"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "villas", force: :cascade do |t|

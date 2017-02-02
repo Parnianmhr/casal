@@ -1,0 +1,12 @@
+<% if admin_logged_in? %>
+<%= render :partial => "home/text_edit" %>
+<% end %>
+
+  <div id="text_edit">
+  Signed in as <%= link_to admin.email, edit_page_path %>
+</div>
+
+<ul>
+<p> <%= link_to "edit text in field", page_path(@content), method: :edit, data:{confirm: "Are you sure?"}, class: "btn btn-danger btn-xs pull right" %> </p>
+</ul>
+<% end %>
