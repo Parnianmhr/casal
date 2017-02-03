@@ -1,13 +1,14 @@
 <%= render 'shared/navbar' %>
 
-<h1>Thanks for your booking!</h1>
 <div class="container">
+    <h3>Thank you for your request!</h3>
+    <p>You will receive an email from us within 3 days.</p>
     <div class="row">
         <div class="col-md-6">
-            <p>Your vacation begins at:
-                <%= @booking.starts_at%></p>
+            <p>Your vacation begins at: <%= @booking.starts_at%></p>
         </div>
         <div class="col-md-6">
-            <p>Your vacation ends at:<%= @booking.ends_at %></p>
+            <p>Your vacation ends at: <%= @booking.ends_at %></p>
         </div>
+
     </div>
