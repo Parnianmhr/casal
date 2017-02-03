@@ -1,39 +1,88 @@
-  <%= render 'shared/navbar' %>
+<%= render 'shared/navbar' %>
 
-<h1 class="title">Fill out your details here and confirm your booking!</h1>
+<h3 class="title">Fill out your details here and confirm your booking!</h3>
 
-<div id="form">
-  <%= form_for @booking do |f| %>
-    <p><%= f.label "Check In:" %>
-    <%= f.date_field :starts_at %></p>
-    <p><%= f.label "Check Out:" %>
-      <%= f.date_field :ends_at %></p>
-    <p><%= f.label "Number of guests:" %>
-      <%= f.number_field :number_of_guests %></p>
-    <hr>
-    <p><%= f.label "Prefix:" %>
-    <%= f.text_field :prefix %></p>
-    <p><%= f.label "First name:" %>
-    <%= f.text_field :first_name %></p>
-    <p><%= f.label "Last name:" %>
-    <%= f.text_field :last_name %></p>
-    <p><%= f.label "Date of birth:" %>
-    <%= f.date_field :date_of_birth %></p>
-    <p><%= f.label "Street:" %>
-    <%= f.text_field :street_name %></p>
-    <p><%= f.label "Streetnumber:" %>
-    <%= f.number_field :house_number %></p>
-    <p><%= f.label "ZIP-code:" %>
-    <%= f.text_field :zipcode %></p>
-    <p><%= f.label "City:" %>
-    <%= f.text_field :city_of_residence %></p>
-    <p><%= f.label "Country:" %>
-    <%= f.text_field :country_of_residence %></p>
-    <p><%= f.label "Phonenumber:" %>
-    <%= f.text_field :phone_number %></p>
-    <p><%= f.label "Email address:" %>
-    <%= f.text_field :email_address %></p>
-    <hr>
-    <%= f.submit :save %>
-<% end %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <%= form_for @booking do |f| %>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "Check In:" %></div>
+                <div class="col-md-9"><%= f.date_field :starts_at, class: "form-control" %></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "Check Out:" %></div>
+                <div class="col-md-9"><%= f.date_field :ends_at, class: "form-control" %></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "Number of guests:" %></div>
+                <div class="col-md-9"><%= f.number_field :number_of_guests, class: "form-control" %></div>
+            </div>
+            <hr>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "Prefix:" %></div>
+                <div class="col-md-9"><%= f.text_field :prefix, class: "form-control" %></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "First name:" %></div>
+                <div class="col-md-9"><%= f.text_field :first_name , class: "form-control"%></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "Last name:" %></div>
+                <div class="col-md-9"><%= f.text_field :last_name, class: "form-control" %></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "Date of birth:" %></div>
+                <div class="col-md-9"><%= f.date_field :date_of_birth, class: "form-control" %></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "Street:" %></div>
+                <div class="col-md-9"><%= f.text_field :street_name, class: "form-control" %></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "Streetnumber:" %></div>
+                <div class="col-md-9"><%= f.number_field :house_number, class: "form-control" %></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "ZIP-code:" %></div>
+                <div class="col-md-9"><%= f.text_field :zipcode, class: "form-control" %></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "City:" %></div>
+                <div class="col-md-9"><%= f.text_field :city_of_residence, class: "form-control" %></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "Country:" %></div>
+                <div class="col-md-9"><%= f.text_field :country_of_residence, class: "form-control" %></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "Phonenumber:" %></div>
+                <div class="col-md-9"><%= f.text_field :phone_number, class: "form-control" %></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3"><%= f.label "Email address:" %></div>
+                <div class="col-md-9"><%= f.text_field :email_address, class: "form-control" %></div>
+            </div>
+            <br>
+            <%= f.submit :save, class: "btn btn-primary navbar-wrapper", style: "margin-left:150px" %>
+            <% end %>
+        </div>
+        <div class="col-md-7">
+
+        </div>
+    </div>
 </div>

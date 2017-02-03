@@ -1,20 +1,18 @@
 class Booking < ApplicationRecord
-  belongs_to :season
-  # belongs_to :villa
 
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :date_of_birth, presence: true
-  validates :street_name, presence: true
-  validates :house_number, presence: true
-  validates :zipcode, presence: true
-  validates :city_of_residence, presence: true
-  validates :country_of_residence, presence: true
-  validates :phone_number, presence: true
-  validates :email_address, presence: true
 
-
+  #
+  # validates :first_name, presence: true
+  # validates :last_name, presence: true
+  # validates :date_of_birth, presence: true
+  # validates :street_name, presence: true
+  # validates :house_number, presence: true
+  # validates :zipcode, presence: true
+  # validates :city_of_residence, presence: true
+  # validates :country_of_residence, presence: true
+  # validates :phone_number, presence: true
+  # validates :email_address, presence: true
 
   # before_create :set_check_in_times
 
@@ -29,7 +27,7 @@ class Booking < ApplicationRecord
     starts_before_ends_after(arrival, departure).or(ends_during(arrival, departure)).or(starts_during(arrival, departure))
   end
 
-  def set_total_price
+  def self.set_total_price
     self.price = booking.price
     total_days = (ends_at.to_date - starts_at.to_date).to_i
     self.total = price * total_days
