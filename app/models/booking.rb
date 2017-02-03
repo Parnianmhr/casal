@@ -1,7 +1,7 @@
 class Booking < ApplicationRecord
 
-  belongs_to :admin
-  belongs_to :season
+
+  #belongs_to :season
 
 
   #
