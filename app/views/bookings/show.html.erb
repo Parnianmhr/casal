@@ -1,14 +1,31 @@
 <%= render 'shared/navbar' %>
 
 <div class="container">
-    <h3>Thank you for your request!</h3>
-    <p>You will receive an email from us within 3 days.</p>
+  <h3 class="title">Thank you for your Booking!</h3>
+  <h5 class="ondertitle">We wish you a nice vacation.</h5>
+  <h5 class="ondertitle" style="margin-bottom:63px">You will receive an email from us within 3 days.</h5>
     <div class="row">
-        <div class="col-md-6">
+          <div class="col-md-4">
+                <a class="thumbnail">
+                    <img class="img-responsive" src="http://res.cloudinary.com/casalverde/image/upload/v1485868284/Casalverde_fotograaf_20_2828_29-5760x3840_pwrspt.jpg" alt="">
+                </a>
+                <a class="thumbnail">
+                    <img class="img-responsive" src="http://res.cloudinary.com/casalverde/image/upload/v1485868355/Casalverde_fotograaf_20_2826_29-5760x3840_nlan3q.jpg" alt="">
+                </a>
+                <a class="thumbnail">
+                    <img class="img-responsive" src="http://res.cloudinary.com/casalverde/image/upload/v1485868411/Casalverde_fotograaf_20_2824_29-5138x3356_mrfe2w.jpg" alt="">
+                </a>
+          </div>
+        <div class="col-md-7">
+        <div style="margin-left:100px">
+          <h5>Your contact ditails and booking information: </h5>
+          <p>(if there is any mistake contact us)</p>
             <p>Your vacation begins at: <%= @booking.starts_at%></p>
-        </div>
-        <div class="col-md-6">
             <p>Your vacation ends at: <%= @booking.ends_at %></p>
+            <p> Booking number: </p>
+            <p>Your email address: <%= @booking.email_address %></p>
+            <p>Your phone number: <%= @booking.phone_number %></p>
         </div>
+      </div>
 
     </div>
