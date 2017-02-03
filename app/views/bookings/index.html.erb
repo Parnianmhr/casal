@@ -1,24 +1,28 @@
 
-  <%= render 'shared/navbar' %>
 
-<div class="container" style="margin-top:100px">
-<br>
-<br>
-<p>overview of bookings</p>
-  <ul>
-    <% @bookings.each do |booking| %>
-      <li><p><%= booking.id %> <%= booking.starts_at %> <%= booking.ends_at %> </p></li>
-    <% end %>
-  </ul>
-  <p>hhshdghdgdgh</p>
-  <p>hhshdghdgdgh</p>
-  <p>hhshdghdgdgh</p>
-  <p>hhshdghdgdgh</p>
-  <p>hhshdghdgdgh</p>
-  <p>hhshdghdgdgh</p>
-  <p>hhshdghdgdgh</p>
-  <p>hhshdghdgdgh</p>
-  <p>hhshdghdgdgh</p>
-  <p>hhshdghdgdgh</p>
+<%= render 'shared/navbar' %>
 
-</div>
+<div class="body-bookings">
+  <br>
+  <br>
+  <h2> Administrator page for Ca'sal Verde </h2>
+  <br>
+  <br>
+    <h4 class="bookings"> There are currently <%= @bookings.length %> bookings. </h4>
+
+    <table class="bookings-table">
+      <tbody>
+        <% @bookings.each do |booking| %>
+          <tr class="bookings-table2">
+            <td id="booking"> <b> Booking period: </b> from: <%= booking.starts_at %> to: <%= booking.ends_at %>.  </td>
+            <td> <b>  &nbsp; Booked by: </b> <%= booking.prefix %> <%= booking.first_name %> <%= booking.last_name %> </td>
+            <td> <b>  &nbsp; Total price: </b> <%= booking.total %> </td>
+            <td> <b>  &nbsp; Number of guests: </b> <%= booking.number_of_guests %> </td>
+            <td> <b>  Guest address: </b> <%= booking.street_name %> <%= booking.house_number %> <%= booking.zipcode %> <%= booking.country_of_residence %> </td>
+            <td> <b>  Guest contact details: <b> </td>
+          </tr>
+          <br>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
