@@ -1,4 +1,4 @@
-rails# This file is auto-generated from the current state of the database. Instead
+# This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
@@ -92,9 +92,8 @@ ActiveRecord::Schema.define(version: 20170203115617) do
     t.decimal  "basic_price"
     t.decimal  "extra_price"
     t.decimal  "discount"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.decimal  "column_service"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.decimal  "service"
   end
 
