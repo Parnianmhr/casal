@@ -53,6 +53,7 @@ class Booking < ApplicationRecord
         ((booking.starts_at > arrival) && (booking.ends_at < departure))
 
 
+
         return false
       end
     end
