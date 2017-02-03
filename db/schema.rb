@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170203133748) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -49,23 +50,6 @@ ActiveRecord::Schema.define(version: 20170203133748) do
     t.index ["villa_id"], name: "index_bookings_on_villa_id", using: :btree
   end
 
-  create_table "guests", force: :cascade do |t|
-    t.string   "salutation"
-    t.string   "first_name"
-    t.string   "insertion"
-    t.string   "last_name"
-    t.date     "date_of_birth"
-    t.string   "country"
-    t.string   "street"
-    t.string   "street_number"
-    t.string   "zipcode"
-    t.string   "city"
-    t.string   "phone_number"
-    t.string   "email_address"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
   create_table "pages", force: :cascade do |t|
     t.text     "text_field1"
     t.text     "text_field2"
@@ -98,12 +82,4 @@ ActiveRecord::Schema.define(version: 20170203133748) do
     t.string   "name"
   end
 
-  create_table "villas", force: :cascade do |t|
-    t.decimal  "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_foreign_key "bookings", "guests"
-  add_foreign_key "bookings", "villas"
 end
