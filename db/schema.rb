@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20170203133748) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -78,6 +77,7 @@ ActiveRecord::Schema.define(version: 20170203133748) do
     t.decimal  "discount"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.decimal  "column_service"
     t.decimal  "service"
     t.string   "name"
   end
