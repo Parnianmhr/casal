@@ -8,12 +8,13 @@
   <h2> Administrator page for Ca'sal Verde </h2>
   <br>
   <br>
-    <h4 class="bookings"> There are currently <%= @bookings.length %> bookings. </h4>
+
+  <h4 class="bookings"> There are currently <%= @bookings.length %> bookings. </h4>
 
     <table class="bookings-table">
       <tbody>
         <% @bookings.each do |booking| %>
-          <% unless "2017-2-3" > Time.now %>
+          <% unless (booking.ends_at).to_date > Time.now %>
                 <tr class="bookings-table2">
                   <td id="booking"> <b> Booking period: </b> from: <%= booking.starts_at %> to: <%= booking.ends_at %>.  </td>
                   <td> <b>  &nbsp; Booked by: </b> <%= booking.prefix %> <%= booking.first_name %> <%= booking.last_name %> </td>

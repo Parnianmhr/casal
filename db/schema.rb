@@ -75,8 +75,10 @@ ActiveRecord::Schema.define(version: 20170203133748) do
     t.decimal  "basic_price"
     t.decimal  "extra_price"
     t.decimal  "discount"
+
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+
     t.decimal  "service"
     t.string   "name"
   end
