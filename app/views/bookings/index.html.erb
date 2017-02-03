@@ -13,15 +13,27 @@
     <table class="bookings-table">
       <tbody>
         <% @bookings.each do |booking| %>
-          <tr class="bookings-table2">
-            <td id="booking"> <b> Booking period: </b> from: <%= booking.starts_at %> to: <%= booking.ends_at %>.  </td>
-            <td> <b>  &nbsp; Booked by: </b> <%= booking.prefix %> <%= booking.first_name %> <%= booking.last_name %> </td>
-            <td> <b>  &nbsp; Total price: </b> <%= booking.total %> </td>
-            <td> <b>  &nbsp; Number of guests: </b> <%= booking.number_of_guests %> </td>
-            <td> <b>  Guest address: </b> <%= booking.street_name %> <%= booking.house_number %> <%= booking.zipcode %> <%= booking.country_of_residence %> </td>
-            <td> <b>  Guest contact details: <b> </td>
-          </tr>
-          <br>
+          <% unless "2017-2-2017" < Time.now %>
+                <tr class="bookings-table2">
+                  <td id="booking"> <b> Booking period: </b> from: <%= booking.starts_at %> to: <%= booking.ends_at %>.  </td>
+                  <td> <b>  &nbsp; Booked by: </b> <%= booking.prefix %> <%= booking.first_name %> <%= booking.last_name %> </td>
+                  <td> <b>  &nbsp; Total price: </b> <%= booking.total %> </td>
+                  <td> <b>  &nbsp; Number of guests: </b> <%= booking.number_of_guests %> </td>
+                  <td> <b>  &nbsp; Guest address: </b> <%= booking.street_name %> <%= booking.house_number %> <%= booking.zipcode %> <%= booking.country_of_residence %> </td>
+                  <td> <b>  &nbsp; Guest contact details: <b/> <%= booking.email_address %> <%= booking.phone_number %>  </td>
+                </tr>
+                <br>
+          <% else %>
+                <tr class="bookings-table3">
+                  <td id="booking"> <b> Booking period: </b> from: <%= booking.starts_at %> to: <%= booking.ends_at %>.  </td>
+                  <td> <b>  &nbsp; Booked by: </b> <%= booking.prefix %> <%= booking.first_name %> <%= booking.last_name %> </td>
+                  <td> <b>  &nbsp; Total price: </b> <%= booking.total %> </td>
+                  <td> <b>  &nbsp; Number of guests: </b> <%= booking.number_of_guests %> </td>
+                  <td> <b>  &nbsp; Guest address: </b> <%= booking.street_name %> <%= booking.house_number %> <%= booking.zipcode %> <%= booking.country_of_residence %> </td>
+                  <td> <b>  &nbsp; Guest contact details: <b/> <%= booking.email_address %> <%= booking.phone_number %>  </td>
+                </tr>
+                <br>
+          <% end %>
         <% end %>
       </tbody>
     </table>
