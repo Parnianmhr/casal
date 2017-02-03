@@ -15,11 +15,9 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
 
-    if
-      Booking.available?(@booking.starts_at, @booking.ends_at)
+    if Booking.available?(@booking.starts_at, @booking.ends_at)
       @booking.set_total_price
-      if
-        @booking.save!
+      if @booking.save!
         redirect_to booking_path(@booking.id), notice: "Thank you for your request. You will receive an email with further information about your booking within 5 days."
       else
         render 'new', notice: "In this date our villa is not available. Please choose another date."
