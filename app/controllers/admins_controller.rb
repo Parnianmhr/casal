@@ -2,6 +2,10 @@ class AdminsController < ApplicationController
   def new
   end
 
+  def index
+    @bookings = Booking.all
+  end
+
   def create
     admin = Admin.new(admin_params)
       if admin.save

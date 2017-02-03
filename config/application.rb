@@ -7,9 +7,9 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module Casal
-  class Application < Rails::Application
-    console do
-        ActiveRecord::Base.connection
-      end
-  end
+    class Application < Rails::Application
+        console do
+            ActiveRecord::Base.connection
+        end
+    end
 end
