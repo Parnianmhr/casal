@@ -1,0 +1,40 @@
+<%= render 'shared/navbar' %>
+
+<div class="body-bookings">
+  <h2 class="header"> All current bookings </h2>
+    <p class="bookings"> There are currently <%= @bookings.length %> </p>
+
+    <table class="bookings-table">
+      <tbody>
+        <% @bookings.each do |booking| %>
+          <tr>
+            <td> Booking period: <%= @booking.starts_at %> to <%= @booking.ends_at %>.  </td>
+            <td> Booking period: <%= @booking.starts_at %> to <%= @booking.ends_at %>.  </td>
+            <td> Booked by: <%= @booking.prefix, @booking.first_name, @booking.last_name %> </td>
+            <td> Total price: <%= @booking.total %> </td>
+            <td> Number of guests: <%= @booking.number_of_guests %> </td>
+            <td> Guest address: <%= @booking.street_name, @booking.house_number @booking.zipcode, @booking.country_of_residence %> </td>
+            <td> Guest contact details: </td>
+
+            <!-- <td> <%= if booking.confirmed == true { puts "Confirmed booking."} %>
+                <%=  else {puts "Optional booking."} <%> </td> -->
+
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- <div class="body-prices">
+    <h2 class="header"> Prices </h2>
+
+      <table class="bookings-table">
+        <tbody>
+          <% @seasons.each do |season| %>
+            <tr>
+              <td> <%= render 'form' %> </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div> -->

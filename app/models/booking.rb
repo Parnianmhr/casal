@@ -1,9 +1,5 @@
 class Booking < ApplicationRecord
 
-
-  #belongs_to :season
-
-
   #
   # validates :first_name, presence: true
   # validates :last_name, presence: true
@@ -29,8 +25,8 @@ class Booking < ApplicationRecord
     starts_before_ends_after(arrival, departure).or(ends_during(arrival, departure)).or(starts_during(arrival, departure))
   end
 
-  def self.set_total_price
-    self.price = booking.price
+  def set_total_price
+    self.price = 100
     total_days = (ends_at.to_date - starts_at.to_date).to_i
     self.total = price * total_days
   end
