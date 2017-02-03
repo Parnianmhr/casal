@@ -26,15 +26,16 @@ class BookingsController < ApplicationController
 
   def create
       @booking = Booking.new(booking_params)
-
-    if Booking.available?(@booking.starts_at, @booking.ends_at)
-        # @booking.set_total_price
-        if @booking.save!
-            redirect_to booking_path(@booking.id)
-        else
-            #do somethings
-        end
-    end
+      if Booking.available?(@booking.starts_at, @booking.ends_at)
+          # @booking.set_total_price
+          if @booking.save!
+              redirect_to booking_path(@booking.id)
+          else
+              redirect_to @booking, notice: "There is a problem with saving your booking. Please try again!"
+          end
+      else
+        redirect_to @booking, notice: "In this date our villa is not available. Please choose another date."   
+      end
   end
     private
 
