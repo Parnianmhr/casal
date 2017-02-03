@@ -12,7 +12,7 @@ class AdminsController < ApplicationController
         session[:admin_id] = admin.id
         redirect_to '/'
       else
-        redirect_to 'new', notice: "Creating new admin failed, please try again"
+        redirect_to '/signup'
       end
   end
 
