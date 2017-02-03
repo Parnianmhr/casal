@@ -1,5 +1,5 @@
 class Season < ApplicationRecord
-  has_many :bookings
+
 
   # def check_season(checkin)
   #   get_dates(booking_params)
