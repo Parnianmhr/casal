@@ -4,9 +4,12 @@ Rails.application.routes.draw do
     get 'pages/home'
     root to: 'pages#home'
 
+
     resources :bookings do
       resources :admins, only:[:index]
+      resources :seasons
     end
+
     resources :seasons
     resources :pages
 
