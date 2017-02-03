@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
        # Save the user id inside the browser cookie. This is how we keep the admin
        # logged in when they navigate around our website.
        session[:admin_id] = admin.id
-       redirect_to '/'
+       redirect_to '/bookings'
      else
        redirect_to '/login'
      end
